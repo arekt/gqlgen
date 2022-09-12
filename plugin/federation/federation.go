@@ -102,7 +102,7 @@ func (f *federation) InjectSourceEarly() *ast.Source {
 `
 	} else if f.Version == 2 {
 		input += `
-	directive @key(fields: _FieldSet!, resolvable: Boolean) repeatable on OBJECT | INTERFACE
+	directive @key(fields: _FieldSet!, resolvable: Boolean=true) repeatable on OBJECT | INTERFACE
 	directive @link(import: [String!], url: String!) repeatable on SCHEMA
 	directive @shareable on OBJECT | FIELD_DEFINITION
 	directive @tag repeatable on OBJECT | FIELD_DEFINITION | INTERFACE | UNION
